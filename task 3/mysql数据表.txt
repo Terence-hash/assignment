@@ -1,0 +1,4 @@
+create database stock;
+use stock;
+create table sh600000 (名称 int, 日期 date, 开盘价 FLOAT(8,2), 最高价 FLOAT(8,2), 最低价 FLOAT(8,2), 收盘价 FLOAT(8,2), 成交量 int, 成交额 int );
+load data local infile 'sh600000.txt' into table sh600000 fields terminated by ',' lines terminated by '\n' ignore 1 lines (名称,日期,开盘价,最高价,最低价,收盘价,成交量,成交额);
